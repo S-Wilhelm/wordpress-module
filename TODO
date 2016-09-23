@@ -1,0 +1,17 @@
+FIXME Define proper state status messages
+FIXME Definitions currently default to 'www-data'
+    While this works on a default Debian install, it is NOT platform independent.
+    Either have the code determine the platform-specific default,
+    or require that the user be specified by the SLS files.
+FIXME Input validation is virtually nonexistent
+
+TODO Restore the 'missing docstring' inspection
+TODO Determine how to handle multi-site vs single-site
+    Probably best handled by a parameter 'multisite' defaulting to 'False'.
+    Separate internal methods for the command variants would cause excessive redundancy,
+    but dynamic command-string building would hurt readability.  What is the best trade-off?
+
+REFINE For themes and plugins, should the ``name`` parameter be the theme/plugin name or the site_path?
+REFINE Check if the 'pchanges' key in the return dict is needed, or if the tutorial is outdated
+REFINE Split the execution modules into platform-specific variants for long-term use
+REFINE Is there a built-in way to handle command sanitization and quote escaping?
